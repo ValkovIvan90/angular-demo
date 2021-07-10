@@ -1,10 +1,7 @@
-@import url('./assets/reset.css');
-@import url('./assets/layout.css');
-@import url('./assets/typography.css');
-@import url('./assets/responsive.css');
-app-root {
-    display: flex;
-}
+@import url('reset.css');
+@import url('layout.css');
+@import url('typography.css');
+@import url('responsive.css');
 
 body {
     max-width: 1366px;
@@ -118,7 +115,7 @@ nav {
 
 /* main  */
 
-app-theme-list {
+main {
     width: 50%;
 }
 
@@ -191,7 +188,7 @@ time {
 
 /* aside  */
 
-app-aside {
+aside {
     width: 29%;
     margin-top: 1em;
     font-size: 0.8em;
@@ -200,7 +197,6 @@ app-aside {
 .aside * {
     margin: 0;
     padding: 0;
-    margin-left: 30px;
 }
 
 .aside>div {
