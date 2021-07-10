@@ -7,8 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  @Input() obj: { name: string };
-
   constructor() { }
 
   ngOnInit(): void {
