@@ -11,6 +11,7 @@ import { TeamListItemComponent } from './team-list-item/team-list-item.component
 import { UserService } from './user.service';
 import { StorageServiceProvider } from './storage.service';
 import { ThemeService } from './theme.service';
+import { PostService } from './post.service';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ThemeService } from './theme.service';
   providers: [
     ThemeService,
     UserService,
-    StorageServiceProvider
+    StorageServiceProvider,
+    PostService
   ],
   bootstrap: [
     AppComponent,

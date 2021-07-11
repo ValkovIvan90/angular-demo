@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ITheme } from '../interfaces/theme';
 import { ThemeService } from '../theme.service';
 
@@ -7,7 +7,7 @@ import { ThemeService } from '../theme.service';
   templateUrl: './theme-list.component.html',
   styleUrls: ['./theme-list.component.css']
 })
-export class ThemeListComponent implements OnInit {
+export class ThemeListComponent implements OnInit, AfterViewInit {
 
   themeList: ITheme[] | any;
 
@@ -16,7 +16,11 @@ export class ThemeListComponent implements OnInit {
   ngOnInit(): void {
     this.themeService.loadThemeList().subscribe((themeList) => {
       this.themeList = themeList
-    })
+    });
+  }
+  ngAfterViewInit(): void {
+    console.log('Views was initialized!');
+
   }
 
 }
