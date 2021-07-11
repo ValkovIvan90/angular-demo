@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ThemeListComponent } from './theme-list/theme-list.component';
 import { AsideComponent } from './aside/aside.component';
 import { FooterComponent } from './footer/footer.component';
+import { TeamListItemComponent } from './team-list-item/team-list-item.component';
+import { UserService } from './user.service';
+import { StorageServiceProvider } from './storage.service';
+import { ThemeService } from './theme.service';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +20,17 @@ import { FooterComponent } from './footer/footer.component';
     ThemeListComponent,
     AsideComponent,
     FooterComponent,
+    TeamListItemComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ThemeService,
+    UserService,
+    StorageServiceProvider
+  ],
   bootstrap: [
     AppComponent,
     HeaderComponent,
