@@ -6,6 +6,7 @@ import { RoutingModule } from './routing/routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { ThemeComponent } from './theme/theme.component';
+import { ContentService } from './content.service';
 
 
 @NgModule({
@@ -18,7 +19,9 @@ import { ThemeComponent } from './theme/theme.component';
     CoreModule,
     RoutingModule
   ],
-  providers: [],
+  providers: [
+    ContentService
+  ],
   bootstrap: [
     AppComponent,
   ]

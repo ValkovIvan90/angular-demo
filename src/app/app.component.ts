@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ContentService } from './content.service';
+import { IPost } from './shared/interfaces';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angularApp';
+  posts: IPost[] | undefined;
 
-  data = {
-    name: 'Test'
+  constructor(private contentService: ContentService) {
+    this.fetchPost();
+  };
+
+  fetchPost(): void {
+    this.posts = undefined;
+    this.contentService.loadPost().subscribe(posts => this.posts = posts);
+
   }
 }
